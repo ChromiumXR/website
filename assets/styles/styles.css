@@ -1,0 +1,129 @@
+body {
+    color: white !important;
+    background-color: white;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Tajawal', sans-serif;
+}
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.section {
+    margin: auto;
+}
+
+.container {
+    padding: 15px 25%;
+}
+
+.blue {
+    background-color: #547cbf !important;
+}
+
+.green {
+    background-color: #2eaa50 !important;
+}
+
+.orange {
+    background-color: #f6bb17 !important;
+}
+
+.red {
+    background-color: #ec4536 !important;
+}
+
+.purple {
+    background-color: #a03e76 !important;
+}
+
+.white {
+    background-color: white !important;
+}
+
+.blue-text {
+    color: #547cbf !important;
+}
+
+.center {
+    text-align: center;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    font-size: 22px;
+    padding: 20px 60px;
+    color: white;
+    margin: 20px 10px 10px;
+    border-radius: 6px;
+    text-align: center;
+    transition: top .01s linear;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+}
+
+.btn.red:hover {
+    background-color: #d55342;
+}
+
+/* 3D button colors */
+.btn.red {
+    background-color: #e74c3c;
+
+}
+
+.btn.red:active {
+    box-shadow: rgba(0, 0, 0, 0.3) 1px 1px;
+}
+
+
+/* The navigation bar */
+.nav {
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    box-shadow: 0 -5px 6px 6px #999;
+
+}
+
+/* Links inside the navbar */
+.nav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+/* Change background on mouse-over */
+.nav a:hover {
+
+}
