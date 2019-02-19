@@ -1,0 +1,67 @@
+body {
+    color: white !important;
+    background-color: white;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Tajawal', sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.section {
+    margin: auto;
+}
+
+.container {
+    padding: 15px 25%;
+}
+
+.purple {
+     background-color: #a13e76;
+ }
+
+.blue {
+    background-color: #2f4f8f;
+}
+
+.center {
+    text-align: center;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    font-size: 22px;
+    padding: 20px 60px;
+    color: white;
+    margin: 20px 10px 10px;
+    border-radius: 6px;
+    text-align: center;
+    transition: top .01s linear;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+    text-decoration: none;
+}
+.btn.red:hover    {background-color: #d55342;}
+
+/* 3D button colors */
+.btn.red {
+    background-color: #e74c3c;
+
+}
+.btn.red:active {
+    box-shadow: rgba(0, 0, 0, 0.3) 1px 1px;
+}
