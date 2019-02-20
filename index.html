@@ -1,39 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="top" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ChromiumXR</title>
     <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="assets/styles/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.0/TweenMax.min.js"></script>
 </head>
 <body>
 <div class="nav white">
-    <a class="blue-text" style="font-size: 20px; font-weight: bold" href="#home">Home</a>
-    <a class="blue-text" style="font-size: 20px; font-weight: bold" href="#news">News</a>
-    <a class="blue-text" style="font-size: 20px; font-weight: bold" href="#contact">Contact</a>
-</div>
-<div class="section white blue-text" style="margin-top: 70px;">
-    <div class="container">
-        <img style="width: 120px; height: 120px; margin-bottom: -10px;" src="assets/img/ChromiumXR_logo_3.0.png"
-             alt="sick chromium logo">
-        <h1>ChromiumXR</h1>
-        <h3>The web browser of the future.</h3>
+    <div id="nav">
+        <a class="blue-text" style="font-size: 20px; font-weight: bold" href="#top">Home</a>
+        <a class="blue-text" style="font-size: 20px; font-weight: bold" href="#first">Info</a>
+        <a class="blue-text" style="font-size: 20px; font-weight: bold" href="#get-started">Download</a>
     </div>
 </div>
-<div class="section green">
+<div class="section white blue-text" style="margin-top: 70px;">
+    <div class="container flex">
+        <div style="flex-grow: 7;">
+            <img style="width: 120px; height: 120px; margin-bottom: -10px;" src="assets/img/ChromiumXR_logo_3.0.png"
+                 alt="sick chromium logo">
+            <h1>ChromiumXR</h1>
+            <h3>The web browser of the future.</h3>
+        </div>
+        <div class="hide-on-med-and-down" style="flex-grow: 3; align-self: center">
+            <a class="btn orange" href="#get-started">Get Started</a>
+        </div>
+    </div>
+    <div class="container">
+        <a href="#first" style="align-self: center;"><i class="material-icons" style="font-size: 120px;">expand_more</i></a>
+    </div>
+</div>
+<div class="section green" id="first">
     <div class="container center">
         <h2>Built by High School Students</h2>
         <h4>Made for you.</h4>
         <p>Sik animation thing here brah</p>
         <img style="width: 100%; height: 700px;" src="assets/img/display-1.png" alt="sik image">
-        <br>
-        <br>
+    </div>
+</div>
+<div class="section orange" id="get-started">
+    <div class="container center">
         <h2>Get Started</h2>
         <p>Download the installer and follow the instructions.</p>
-        <a class="btn red" href="https://downloadmoreram.com/download.html" target="_blank">Download</a>
+        <a class="btn blue" href="https://downloadmoreram.com/download.html" target="_blank">Download</a>
     </div>
 </div>
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on('click', function (event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+</script>
 </html>
