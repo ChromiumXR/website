@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html id="top" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChromiumXR</title>
+    <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.0/TweenMax.min.js"></script>
+</head>
+<body>
+<div class="section white blue-text" style="margin-top: 70px;">
+    <div class="container flex">
+        <div style="flex-grow: 7;">
+            <img onclick="window.location.href = '/'" style="width: 120px; height: 120px; margin-bottom: -10px; cursor: pointer;" src="assets/img/ChromiumXR_logo_3.0.png"
+                 alt="sick chromium logo">
+            <h1>ChromiumXR Docs</h1>
+            <h3>Make your website compatible.</h3>
+        </div>
+    </div>
+    <div class="container">
+        <a href="#first" style="align-self: center;"><i class="material-icons" style="font-size: 120px;">expand_more</i></a>
+    </div>
+</div>
+<div class="section green" id="first">
+    <div class="container center" style="height: 500px; margin-bottom: -27px;">
+        <h2>Search the docs</h2>
+    </div>
+</div>
+<div class="section orange" id="get-started" style="height: 500px; margin-bottom: -27px;">
+    <div class="container center">
+        <h2>Get Started</h2>
+    </div>
+</div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on('click', function (event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+</script>
+</html>

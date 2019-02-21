@@ -1,0 +1,114 @@
+body {
+    color: white !important;
+    background-color: white;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Tajawal', sans-serif;
+    scroll-behavior: smooth;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px; /* remove scrollbar space */
+    background: transparent; /* optional: just make scrollbar invisible */
+}
+
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+a {
+    color: #547cbf;
+}
+
+.container {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.blue {
+    background-color: #547cbf !important;
+}
+
+.green {
+    background-color: #2eaa50 !important;
+}
+
+.orange {
+    background-color: #f6bb17 !important;
+}
+
+.red {
+    background-color: #ec4536 !important;
+}
+
+.purple {
+    background-color: #a03e76 !important;
+}
+
+.white {
+    background-color: white !important;
+}
+
+.blue-text {
+    color: #547cbf !important;
+}
+
+.black-text {
+    color: #000 !important;
+}
+
+.white-text {
+    color: #fff;
+}
+
+.orange-text {
+    color: #f6bb17;
+}
+
+.red-text {
+    color: #ec4536;
+}
+
+.green-text {
+    color: #2eaa50;
+}
+
+.gray-text {
+    color: #8da3b1;
+}
+
+.center {
+    text-align: center;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.content-subhead i {
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .smol {
+        margin-top: -35px
+    }
+}
