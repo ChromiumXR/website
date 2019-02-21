@@ -2,6 +2,7 @@ body {
     color: white !important;
     background-color: white;
     box-sizing: border-box;
+    line-height: 2.4em !important;
     margin: 0;
     font-family: 'Tajawal', sans-serif;
     scroll-behavior: smooth;
@@ -110,5 +111,14 @@ a {
 @media only screen and (max-width: 768px) {
     .smol {
         margin-top: -35px
+    }
+    .hide-on-med-and-down {
+        display: none;
+    }
+    .splash-head {
+        font-size: 35pt !important;
+    }
+    .splash-subhead {
+        font-size: 17pt !important;
     }
 }
