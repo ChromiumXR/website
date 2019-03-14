@@ -38,6 +38,13 @@ class Model extends HTMLElement{
     getTexturePath() {
         return this.getAttribute('texturePath')
     }
+    getDisplay() {
+    	if (this.getAttribute('desktop') === 'true') {
+    		return 'inherit'
+		} else {
+    		return 'none'
+		}
+	}
 }
 
 customElements.define('xr-mdl', Model);
@@ -47,7 +54,7 @@ function updateModel (element) {
     const materialPath = element.getMaterialPath();
     const objectPath = element.getObjectPath();
     const texturePath = element.getTexturePath();
-
+	const displayValue = element.getDisplay();
     const scene = new THREE.Scene();
 
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -56,9 +63,9 @@ function updateModel (element) {
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
     //todo: hide the canvas so it only appears in unity
-    //renderer.domElement.style.display = 'none';
+    renderer.domElement.style.display = displayValue;
     let vrButton = WEBVR.createButton( renderer );
-    //vrButton.style.display = 'none';
+    vrButton.style.display = displayValue;
     document.body.appendChild( vrButton );
     renderer.vr.enabled = true;
     document.body.appendChild( renderer.domElement );
