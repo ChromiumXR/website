@@ -1,6 +1,5 @@
 XRLoader.init({desktop: true, id: 'ha'});
-let model = new XRModel({ obj: './models/chrome/chrome.obj', mtl: './models/chrome/chrome.mtl', texturePath: './models/chrome/'});
-
-model.setRotation(0, 0, 0);
-model.setScale(1, 1, 1);
-model.build();
+setInterval(function() {
+    let oldY = parseInt(document.getElementById('r2d2').getAttribute('rotation').split(',')[1]);
+    document.getElementById('r2d2').setAttribute('rotation', '0,' + (oldY + 1) + ',0')
+}, 20);
